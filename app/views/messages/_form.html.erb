@@ -22,5 +22,11 @@
 	<%= f.text_area :body, :size=>"20x10"%>
 	</div>
 	<br />
+	<span style="float:left">年齢:</span>
+	<div class="list-inline">
+	<%= f.number_field :age %>
+	</div>
+	<br />
+	
 	<%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
