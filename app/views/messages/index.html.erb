@@ -12,29 +12,4 @@
  </div>
 </div>
 
-<%= form_for(@message) do |f| %>
-  <% if @message.errors.present? %>
-   <div class="alert alert-danger" >
-   	<%= alert %>
-   	<ul>
-   		<% @message.errors.full_messages.each do |full_message| %>
-   		<li>
-   			<%= full_message %>
-   		</li>
-   		<% end %>
-   	</ul>
-   </div>
-   <% end %>
-
-
-	<span style="float:left">名前:</span>
-	<div class="list-inline">
-	<%= f.text_field :name, :size=>"21"%></div>
-     <br />
-	<span style="float:left">内容:</span>
-	<div class="list-inline">
-	<%= f.text_area :body, :size=>"20x10"%>
-	</div>
-	<br />
-	<%= f.submit class: "btn btn-sm btn-primary" %>
-<% end %>
+<%= render 'form' %>
